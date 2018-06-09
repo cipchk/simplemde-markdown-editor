@@ -1,3 +1,19 @@
+# 变更日志
+
+## 常规
+
+- 更名为：`simplemde-antd`
+- 重新以 `1.0.0` 做为新版本号
+- 设置 eslint `"no-useless-escape": 0`
+
+## 细节
+
+- 移除：`autoDownloadFontAwesome` 强制性，注释：1280-1290
+- 移除：拼写检查（codemirror的拼写检查对中文无效）
+- 变更图标：使用 antd 命名规则，默认的 icon 文件根目录 `icon.zip`
+- 变更默认语言：中文 `toolbarBuiltInButtons` [1069]
+- 增加状态栏 `counts` 表示字符长度 [1797]，且将默认：`words` 变成 `counts` [1340]
+
 # SimpleMDE - Markdown Editor
 A drop-in JavaScript textarea replacement for writing beautiful and understandable Markdown. The WYSIWYG-esque editor allows users who may be less experienced with Markdown to use familiar toolbar buttons and shortcuts. In addition, the syntax is rendered while editing to clearly show the expected result. Headings are larger, emphasized words are italicized, links are underlined, etc. SimpleMDE is one of the first editors to feature both built-in autosaving and spell checking.
 

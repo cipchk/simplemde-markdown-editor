@@ -10,7 +10,7 @@ require("codemirror/addon/display/placeholder.js");
 require("codemirror/addon/selection/mark-selection.js");
 require("codemirror/mode/gfm/gfm.js");
 require("codemirror/mode/xml/xml.js");
-var CodeMirrorSpellChecker = require("codemirror-spell-checker");
+// var CodeMirrorSpellChecker = require("codemirror-spell-checker");
 var marked = require("marked");
 
 
@@ -1070,59 +1070,60 @@ var toolbarBuiltInButtons = {
 	"bold": {
 		name: "bold",
 		action: toggleBold,
-		className: "fa fa-bold",
-		title: "Bold",
+		className: "smdi smdi-bold",
+		title: "加粗",
 		default: true
 	},
 	"italic": {
 		name: "italic",
 		action: toggleItalic,
-		className: "fa fa-italic",
-		title: "Italic",
+		className: "smdi smdi-italic",
+		title: "斜体",
 		default: true
 	},
 	"strikethrough": {
 		name: "strikethrough",
 		action: toggleStrikethrough,
-		className: "fa fa-strikethrough",
-		title: "Strikethrough"
+		className: "smdi smdi-strikethrough",
+		title: "删除线",
+		default: true
 	},
 	"heading": {
 		name: "heading",
 		action: toggleHeadingSmaller,
-		className: "fa fa-header",
-		title: "Heading",
+		className: "smdi smdi-header",
+		title: "标题",
 		default: true
 	},
 	"heading-smaller": {
 		name: "heading-smaller",
 		action: toggleHeadingSmaller,
-		className: "fa fa-header fa-header-x fa-header-smaller",
-		title: "Smaller Heading"
+		className: "smdi smdi-header fa-header-x fa-header-smaller",
+		title: "小号标题"
 	},
 	"heading-bigger": {
 		name: "heading-bigger",
 		action: toggleHeadingBigger,
-		className: "fa fa-header fa-header-x fa-header-bigger",
-		title: "Bigger Heading"
+		className: "smdi smdi-header fa-header-x fa-header-bigger",
+		title: "大号标题"
 	},
 	"heading-1": {
 		name: "heading-1",
 		action: toggleHeading1,
-		className: "fa fa-header fa-header-x fa-header-1",
-		title: "Big Heading"
+		className: "smdi smdi-header fa-header-x fa-header-1",
+		title: "标题1"
 	},
 	"heading-2": {
 		name: "heading-2",
 		action: toggleHeading2,
-		className: "fa fa-header fa-header-x fa-header-2",
-		title: "Medium Heading"
+		className: "smdi smdi-header fa-header-x fa-header-2",
+		title: "标题2"
 	},
 	"heading-3": {
 		name: "heading-3",
 		action: toggleHeading3,
-		className: "fa fa-header fa-header-x fa-header-3",
-		title: "Small Heading"
+		className: "smdi smdi-header fa-header-x fa-header-3",
+		title: "标题3"
 	},
 	"separator-1": {
 		name: "separator-1"
@@ -1130,35 +1131,37 @@ var toolbarBuiltInButtons = {
 	"code": {
 		name: "code",
 		action: toggleCodeBlock,
-		className: "fa fa-code",
-		title: "Code"
+		className: "smdi smdi-code",
+		title: "代码",
+		default: true
 	},
 	"quote": {
 		name: "quote",
 		action: toggleBlockquote,
-		className: "fa fa-quote-left",
-		title: "Quote",
+		className: "smdi smdi-quote-left",
+		title: "引用",
 		default: true
 	},
 	"unordered-list": {
 		name: "unordered-list",
 		action: toggleUnorderedList,
-		className: "fa fa-list-ul",
-		title: "Generic List",
+		className: "smdi smdi-list-ul",
+		title: "无序列表",
 		default: true
 	},
 	"ordered-list": {
 		name: "ordered-list",
 		action: toggleOrderedList,
-		className: "fa fa-list-ol",
-		title: "Numbered List",
+		className: "smdi smdi-list-ol",
+		title: "有序列表",
 		default: true
 	},
 	"clean-block": {
 		name: "clean-block",
 		action: cleanBlock,
-		className: "fa fa-eraser fa-clean-block",
-		title: "Clean block"
+		className: "smdi smdi-eraser fa-clean-block",
+		title: "清除",
+		default: true
 	},
 	"separator-2": {
 		name: "separator-2"
@@ -1166,28 +1169,30 @@ var toolbarBuiltInButtons = {
 	"link": {
 		name: "link",
 		action: drawLink,
-		className: "fa fa-link",
-		title: "Create Link",
+		className: "smdi smdi-link",
+		title: "链接",
 		default: true
 	},
 	"image": {
 		name: "image",
 		action: drawImage,
-		className: "fa fa-picture-o",
-		title: "Insert Image",
+		className: "smdi smdi-image",
+		title: "图像",
 		default: true
 	},
 	"table": {
 		name: "table",
 		action: drawTable,
-		className: "fa fa-table",
-		title: "Insert Table"
+		className: "smdi smdi-table",
+		title: "表格",
+		default: true
 	},
 	"horizontal-rule": {
 		name: "horizontal-rule",
 		action: drawHorizontalRule,
-		className: "fa fa-minus",
-		title: "Insert Horizontal Line"
+		className: "smdi smdi-line",
+		title: "水平线",
+		default: true
 	},
 	"separator-3": {
 		name: "separator-3"
@@ -1195,22 +1200,22 @@ var toolbarBuiltInButtons = {
 	"preview": {
 		name: "preview",
 		action: togglePreview,
-		className: "fa fa-eye no-disable",
-		title: "Toggle Preview",
+		className: "smdi smdi-eye no-disable",
+		title: "切换预览",
 		default: true
 	},
 	"side-by-side": {
 		name: "side-by-side",
 		action: toggleSideBySide,
-		className: "fa fa-columns no-disable no-mobile",
-		title: "Toggle Side by Side",
+		className: "smdi smdi-columns no-disable no-mobile",
+		title: "实时预览",
 		default: true
 	},
 	"fullscreen": {
 		name: "fullscreen",
 		action: toggleFullScreen,
-		className: "fa fa-arrows-alt no-disable no-mobile",
-		title: "Toggle Fullscreen",
+		className: "smdi smdi-fullscreen no-disable no-mobile",
+		title: "切换全屏",
 		default: true
 	},
 	"separator-4": {
@@ -1218,9 +1223,9 @@ var toolbarBuiltInButtons = {
 	},
 	"guide": {
 		name: "guide",
-		action: "https://simplemde.com/markdown-guide",
-		className: "fa fa-question-circle",
-		title: "Markdown Guide",
+		action: "http://wowubuntu.com/markdown/index.html",
+		className: "smdi smdi-question",
+		title: "Markdown指南",
 		default: true
 	},
 	"separator-5": {
@@ -1229,14 +1234,16 @@ var toolbarBuiltInButtons = {
 	"undo": {
 		name: "undo",
 		action: undo,
-		className: "fa fa-undo no-disable",
-		title: "Undo"
+		className: "smdi smdi-undo no-disable",
+		title: "撤销",
+		default: true
 	},
 	"redo": {
 		name: "redo",
 		action: redo,
-		className: "fa fa-repeat no-disable",
-		title: "Redo"
+		className: "smdi smdi-redo no-disable",
+		title: "重做",
+		default: true
 	}
 };
 
@@ -1277,17 +1284,17 @@ function SimpleMDE(options) {
 		autoDownloadFA = false;
 	}
 
-	if(options.autoDownloadFontAwesome !== true) {
-		var styleSheets = document.styleSheets;
-		for(var i = 0; i < styleSheets.length; i++) {
-			if(!styleSheets[i].href)
-				continue;
+	// if(options.autoDownloadFontAwesome !== true) {
+	// 	var styleSheets = document.styleSheets;
+	// 	for(var i = 0; i < styleSheets.length; i++) {
+	// 		if(!styleSheets[i].href)
+	// 			continue;
 
-			if(styleSheets[i].href.indexOf("//maxcdn.bootstrapcdn.com/font-awesome/") > -1) {
-				autoDownloadFA = false;
-			}
-		}
-	}
+	// 		if(styleSheets[i].href.indexOf("//maxcdn.bootstrapcdn.com/font-awesome/") > -1) {
+	// 			autoDownloadFA = false;
+	// 		}
+	// 	}
+	// }
 
 	if(autoDownloadFA) {
 		var link = document.createElement("link");
@@ -1330,7 +1337,7 @@ function SimpleMDE(options) {
 
 	// Handle status bar
 	if(!options.hasOwnProperty("status")) {
-		options.status = ["autosave", "lines", "words", "cursor"];
+		options.status = ["autosave", "lines", "counts", "cursor"];
 	}
 
 
@@ -1465,14 +1472,14 @@ SimpleMDE.prototype.render = function(el) {
 
 	var mode, backdrop;
 	if(options.spellChecker !== false) {
-		mode = "spell-checker";
-		backdrop = options.parsingConfig;
-		backdrop.name = "gfm";
-		backdrop.gitHubSpice = false;
+		// mode = "spell-checker";
+		// backdrop = options.parsingConfig;
+		// backdrop.name = "gfm";
+		// backdrop.gitHubSpice = false;
 
-		CodeMirrorSpellChecker({
-			codeMirrorInstance: CodeMirror
-		});
+		// window.CodeMirrorSpellChecker({
+		// 	codeMirrorInstance: CodeMirror
+		// });
 	} else {
 		mode = options.parsingConfig;
 		mode.name = "gfm";
@@ -1573,18 +1580,18 @@ SimpleMDE.prototype.autosave = function() {
 			var d = new Date();
 			var hh = d.getHours();
 			var m = d.getMinutes();
-			var dd = "am";
+			var dd = "上午";
 			var h = hh;
 			if(h >= 12) {
 				h = hh - 12;
-				dd = "pm";
+				dd = "下午";
 			}
 			if(h == 0) {
 				h = 12;
 			}
 			m = m < 10 ? "0" + m : m;
 
-			el.innerHTML = "Autosaved: " + h + ":" + m + " " + dd;
+			el.innerHTML = "自动保存： " + h + ":" + m + " " + dd;
 		}
 
 		this.autosaveTimeoutId = setTimeout(function() {
@@ -1786,6 +1793,13 @@ SimpleMDE.prototype.createStatusbar = function(status) {
 				};
 				onUpdate = function(el) {
 					el.innerHTML = wordCount(cm.getValue());
+				};
+			} else if(name === "counts") {
+				defaultValue = function(el) {
+					el.innerHTML = cm.getValue().length;
+				};
+				onUpdate = function(el) {
+					el.innerHTML = cm.getValue().length;
 				};
 			} else if(name === "lines") {
 				defaultValue = function(el) {
